@@ -19,13 +19,15 @@
 
 <body>
 
-  <div>
+  <div id="sub-body">
+    <div id="fade-out" class="hide"></div>
 
-    <div class="nav-row-wrapper">
+
+    <div class="nav-row-wrapper" id="nav-row-wrapper">
       <div class="nav-row">
 
         <div><img alt="" src="./images/logo.svg"></div>
-        <div id='list-div'>
+        <div id='list-div' class="hide">
           <ul>
             <li tabindex=0> Home </li>
             <li tabindex=0> About </li>
@@ -35,7 +37,7 @@
 
           </ul>
         </div>
-        <button class="request-invite">Request Invite </button>
+        <button class="request-invite" id="request-invite-1">Request Invite </button>
 
       </div>
     </div>
@@ -57,7 +59,10 @@
 
       <div>
         <div id="hero-img">
-          <img id="hero-1-img" src="./images/bg-intro-desktop.svg" alt="">
+          <picture >
+            <source media="(max-width:899px)" srcset="./images/bg-intro-mobile.svg" >
+            <img id="hero-1-img" alt="" src="./images/bg-intro-desktop.svg" alt="hero-image">
+          </picture>
           <img id="hero-2-img" src="./images/image-mockups.png" alt="">
         </div>
       </div>
@@ -207,9 +212,12 @@
       </div>
     </div>
 
+  <div class="menu-cancel">
+    <img id="menu" tabindex=0 src="./images/icon-hamburger.svg" alt=""><img id="close" class="hide" tabindex=0 src="./images/icon-close.svg" alt="">
 
   </div>
 
+  </div>
 
 
 
@@ -227,6 +235,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>
   </div>
 
-  <script src="index.js">  </script>
+
+
+  
+  <script src="./index.js">  </script>
 </body>
 </html>
